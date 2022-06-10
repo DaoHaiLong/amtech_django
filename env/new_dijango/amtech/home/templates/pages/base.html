@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <div class="wapper">
+        <div class="header">
+            <div class="container">
+                <!-- <div class="header-inner"> -->
+                <div class="rows">
+                    <div class="header-left">
+                        <div class="header-left__top">
+                            <a href="tel:+0800268324">0800 268 324</a>
+                        </div>
+                        <div class="header-left__buttom">
+                            <div class="dropdown">
+                                <a class="level-top" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Product
+                                        </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="link-product">
+                                        <a class="dropdown-item" href="#">Dental</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Consumables</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3;">
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/anaesthetics">Anaesthetics</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/dental-bibs-20">Dental Bibs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/dental-cotton-consumables">Dental Cotton Consumables</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/dental-dams">Dental Dams</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/dental-plastic-consumables">Dental Plastic Consumables</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/emergency-resuscitation">Emergency&amp; Resuscitation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/endodontics">Endodontics</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/evacuation">Evacuation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/finishing-polishing">Finishing &amp; Polishing</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/impression-products">Impression Products</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/infection-control-hygiene">InfectionControl &amp; Hygiene</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/janitorial-wash-room-supplies">Janitorial &amp; Wash Room Supplies</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/oral-health-products">Oral Health Products</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/oral-surgery">Oral Surgery</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/restorative">Restorative</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/sterilisation-consumables">Sterilisation Consumables</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/syringes-needles-sharps">Syringes, Needles &amp; Sharps</a>
+                                                    </li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/dental/consumables-7/whitening-products">Whitening Products</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/consumables-7/x-ray-products">X-Ray Products</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Equipment</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3; position:absolute; top:-55px">
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/carts-trolleys">Carts &amp;Trolleys</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/defibrillators">Defibrillators</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/dental-ergonomics">Dental Ergonomics</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/diagnostic-equipment">Diagnostic Equipment</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/electronic-monitoring">Electronic Monitoring</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/iv-poles-accessories">IV Poles &amp; Accessories</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/lubrication-system">Lubrication System</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/sterilisation-equipment">Sterilisation Equipment</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/trolleys">Trolleys</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item" href="/category/web/dental/equipment-13/ultrasonic-cleaners">Ultrasonic Cleaners</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">On Special </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="link-product">
+                                        <a class="dropdown-item" href="#">First Aid </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Consumables</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3;">
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/burn-kits">Burn Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/burn-treatments">Burn Treatments</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/civil-defence-kit-components">Civil Defence Kit Components</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/civil-defence-kits">Civil Defence Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/emergency-rescue-bags-and-kits">Emergency Rescue Bags and Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/eye-care-kits">Eye Care Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/first-aid-kit-components">First Aid Kit Components</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/first-aid-kits">First Aid Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/linen-products">Linen Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/merchandise">Merchandise</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/modules">Modules</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/nurses-pouches">Nurses Pouches</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/plaster-dressings">Plaster Dressings</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/platinum-retail-packs">Platinum Retail Packs</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/resuscitation-oxygen-supplies">Resuscitation &amp; Oxygen Supplies</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/spill-kits">Spill Kits</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/consumables/stickers-and-related-products">Stickers and Related Products</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Equipment</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3; position:absolute; top:-55px">
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/equipment/defibrillation">Defibrillation</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/equipment/defibrillator-cabinets">Defibrillator Cabinets</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/equipment/rescue-stretchers-accessories">Rescue Stretchers &amp; Accessories</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/equipment/theatre-equipment">Theatre Equipment</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/first-aid/equipment/wall-cabinets">Wall Cabinets</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">On Special </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="link-product">
+                                        <a class="dropdown-item" href="#">Height Safety </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Anchor & Block Systems</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Bags & Backpacks</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Harnesses</a>
+
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Lanyards & Pole Straps</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Metalware</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">PPE</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Pulleys & Swivels</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="link-product">
+                                        <a class="dropdown-item" href="#">Medical</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Consumables</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3;">
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/4med-distribution">4Med Distribution</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/bandages">Bandages</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/braces-supports-40">Braces &amp; Supports</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/comfort-support-and-back-care">Comfort support and back care</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/diagnostic-consumables">Diagnostic Consumables</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/drug-and-alcohol-testing">Drug and Alcohol Testing</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/ear-care-products">Ear Care Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/eye-care-products">Eye Care Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/fluids">Fluids</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/general-exercise-47">General Exercise</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/hardware-and-medical-room-supplies">Hardware and Medical Room Supplies</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/incontinence-products">Incontinence Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/infection-control-hygiene-50">Infection Control &amp; Hygiene</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/janitorial-wash-room-supplies-52">Janitorial &amp; Wash Room Supplies</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/minor-surgery-devices">Minor Surgery Devices </a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/pharmaceuticals">Pharmaceuticals</a></li>
+
+                                                    <li><a href="/category/web/medical/consumables-9/plaster-and-padding">Plaster and Padding</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/procedure-multipacks">Procedure &amp; Multipacks</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/rapid-antigen-tests">Rapid Antigen Tests</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/respiratory-resuscitation-anaesthesia">Respiratory, Resuscitation &amp; Anaesthesia</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/skin-care-lotions-rubs-and-therapy-products">Skin Care, Lotions, Rubs and Therapy Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/sterilisation-consumable-products">Sterilisation Consumable Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/sutures-staples-accessories">Sutures, Staples &amp; Accessories</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/syringes-needles-and-sharps-products">Syringes, Needles and Sharps Products</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/tapes">Tapes</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/consumables-9/woundcare-dressings">Woundcare Dressings</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Equipment</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3; position:absolute; top:-55px">
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/audiometers-tympanometers">Audiometers &amp; Tympanometers</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/beds-trolleys">Beds &amp; Trolleys</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/braces-supports-65">Braces &amp; Supports</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/casting-66">Casting</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/defibrillation-1181">Defibrillation</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/diagnostic-equipment-68">Diagnostic Equipment</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/electronic-monitoring-equipment">Electronic Monitoring Equipment</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/electrosurgery-cryotherapy">Electrosurgery &amp; Cryotherapy</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/general-exercise-71">General Exercise</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/loupes-headlights">Loupes &amp; Headlights</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/medical-lighting">Medical Lighting</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/medical-patient-chairs">Medical Patient Chairs</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/nebulisers">Nebulisers</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/point-of-care-diagnostics">Point of Care Diagnostics</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/refrigeration">Refrigeration</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/scales-height-measures">Scales &amp; Height Measures</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/sterilisation-equipment-78">Sterilisation Equipment</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/suction-pumps-aspirators">Suction Pumps &amp; Aspirators</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/thermoplastics-80">Thermoplastics</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/ultrasonic-cleaners-distillers">Ultrasonic Cleaners &amp; Distillers</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/medical/equipment-10/wheelchairs">Wheelchairs</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">On Special</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="link-product">
+                                        <a class="dropdown-item" href="#">Physio </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Consumables</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3;">
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/acupuncture">Acupuncture</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/braces-supports">Braces &amp; Supports</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/casting">Casting</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/comfort-support-backcare">Comfort Support &amp; Backcare</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/electrotherapy">Electrotherapy</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/first-aid-87">First Aid</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/general-exercise">General Exercise</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/hot-and-cold-therapy">Hot and Cold Therapy</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/practice-supplies">Practice Supplies</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/tape-strapping">Tape &amp; Strapping</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/thermoplastics">Thermoplastics</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/consumables-11/woundcare">Woundcare</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Equipment</a>
+                                                <ul class="dropdown-menu dropdown-submenu" style="column-count: 3; position:absolute; top:-55px">
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/electrotherapy-86">Electrotherapy</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/first-aid-96">First Aid</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/general-exercise-99">General Exercise</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/gym-equipment">Gym Equipment</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/hot-and-cold-therapy-95">Hot and Cold Therapy</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/thermoplastics-98">Thermoplastics</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/treatment-furniture">Treatment Furniture</a></li>
+
+                                                    <li><a class="dropdown-item" href="/category/web/physio/equipment-15/wheelchairs-crutches">Wheelchairs &amp; Crutches</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">On Special</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="level-top" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li class="link-services">
+                                        <a class="dropdown-item" href="#">360 Product Review</a>
+                                        <a class="dropdown-item" href="#">Design, Fit out & Install</a>
+                                        <a class="dropdown-item" href="#">Storage & Shelving</a>
+                                        <a class="dropdown-item" href="#">Online Ordering</a>
+                                        <a class="dropdown-item" href="#">Product Demos</a>
+                                        <a class="dropdown-item" href="#">Trade Account</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="level-top" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">About </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li class="link-about">
+                                        <a class="dropdown-item" href="#">Our Story</a>
+                                        <a class="dropdown-item" href="#">Why Amtech</a>
+                                        <a class="dropdown-item" href="#">Meet Our Experts</a>
+                                        <a class="dropdown-item" href="#">Our Newsroom</a>
+                                        <a class="dropdown-item" href="#">Publications</a>
+                                        <a class="dropdown-item" href="#">Contact Us</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="{% static 'images/logo.png'%}" alt="logo">
+                    </div>
+                    <div class="header-right ">
+                        <div class="header-right__top">
+                            <form action="#" method="get">
+                                <input id="rp-input-search" data-cy="search-input" autocomplete="off" type="text" name="search" value="" placeholder="Search here...">
+                                <button type="submit">
+                                    <span><i class="fas fa-search"></i></span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="header-right__buttom">
+                            <div class="login">
+                                <a href="#"><i class="fas fa-user"></i>Login</a>
+                            </div>
+                            <div class="favourites">
+                                <a href="#"><i class="fas fa-heart"></i>Favourites</a>
+                            </div>
+                            <div class="cart dropdown">
+                                <a href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-shopping-cart"></i>Cart</a>
+                                <ul class="cart-item dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li class="link-cart">
+                                        <a class="specials dropdown-item" href="#">Items in Cart</a>
+                                        <a class="special dropdown-item" href="#">View Cart and <br> Checkout</a>
+                                        <a class="specials dropdown-item" href="#">Cart Subtotal: <br>$0</a>
+                                    </li>
+                                    <!-- <div class="minicart-notification">
+                                        <p>Your cart is empty!</p>
+                                    </div> -->
+
+                                </ul>
+                                <ul class="notification dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <div class="minicart-notification">
+                                        <p>Your cart is empty!</p>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+        <!-- <div class="status_notification">
+            <p>Due to current supply issues, some masks, PPE products, and Rapid Antigen kits are unavailable.</p>
+        </div> -->
+        {% block notification%}{%endblock notification%}
+        <!-- block main -->
+        {% block content %} {% endblock content %}
+
+        <div class="footer" id="footer-main">
+            <div class="footer-primary-container section-container">
+                <div class="container">
+                    <div class="footer-primary">
+                        <div class="inner-container">
+                            <div class="footer-primary-top row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-about footer-content">
+                                        <h4>Product</h4>
+                                        <ul>
+
+                                            <li><a title="Medical" href="#">Dental</a></li>
+
+                                            <li><a title="Medical" href="#">First Aid</a></li>
+
+                                            <li><a title="Medical" href="#">Height Safety</a></li>
+
+                                            <li><a title="Medical" href="#">Medical</a></li>
+
+                                            <li><a title="Medical" href="#">Physio</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-service footer-content">
+                                        <h4>WHY AMTECH</h4>
+                                        <ul>
+                                            <li><a title="Our Story" href="/our-story/">Our Story</a></li>
+                                            <li><a title="Why Amtech" href="/why-amtech/">Why Amtech</a></li>
+                                            <li><a title="Why Amtech" href="/testimonials/">Testimonials</a></li>
+                                            <li><a title="Meet Our Experts" href="/meet-our-experts/">Meet Our Experts</a></li>
+                                            <li><a title="Service &amp; Solutions" href="/storage-shelving/">Service &amp; Solutions</a></li>
+                                            <li><a title="Our Newsroom" href="/newsroom/">Our Newsroom</a></li>
+                                            <li><a title="Publications" href="/publications/">Publications</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-ab footer-content">
+                                        <h4>CLIENT CARE <span class="border-bot">&nbsp;</span></h4>
+                                        <ul>
+                                            <li><a href="tel:0800268324">0800 268 324 (NZ)</a></li>
+                                            <li><a title="Contact" href="/contact/">Contact</a></li>
+                                            <li><a title="WebChat" href="#">WebChat</a></li>
+                                            <li><a title="FAQ" href="#">FAQ</a></li>
+                                            <li><a title="Delivery &amp; Returns" href="/shipping-returns/">Delivery &amp; Returns</a></li>
+                                            <li><a title="Trade Accounts" href="/trade-account/">Trade accounts</a></li>
+                                            <li><a title="Privacy" href="/privacy-policy-cookie-restriction-mode/">Privacy</a></li>
+                                            <li><a title="Terms" href="/terms-and-conditions/">Terms</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="footer-ab">
+                                        <h4>SUBSCRIBE</h4>
+                                        <p>Stay up-to-date on everything Amtech</p>
+                                        <div class="block newsletter">
+                                            <div class="content">
+                                                <form class="form subscribe" novalidate="novalidate" action="" method="post" id="newsletter-validate-detail">
+                                                    <div class="field newsletter">
+                                                        <div class="control">
+                                                            <input name="email" type="email" id="newsletter" placeholder="Your email" data-validate="{required:true, 'validate-email':true}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button class="action subscribe primary btn theme-btn-1" title="Sign Up" type="submit">
+										                    <span>Sign Up</span>
+										                </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <ul class="footer-social">
+                                            <li>
+                                                <a href="#" target="_blank"><img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/fb.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/twitter.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/linkedin.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/youtube.svg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/vimeo.svg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: footer-primary -->
+                </div>
+            </div>
+            <div class="footer-bottom-container section-container">
+                <div class="footer-bottom footer container">
+                    <div class="inner-container">
+                        <div class="item item-left">
+                            <div class="footer-copyright">
+                                <small class="copyright">Copyright © Amtech Medical Ltd. All rights reserved..</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: inner-container -->
+                </div>
+                <!-- end: footer-bottom -->
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- Scrip -->
+    <script src="./js/style.js"></script>
+    <script>
+        $('.slider').slick({
+            fade: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            adaptiveHeight: true,
+            dots: true,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    infinite: true,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    infinite: true,
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

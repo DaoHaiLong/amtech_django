@@ -1,0 +1,356 @@
+{% extends 'catalog/base.html' %}
+<!-- title -->
+{% block title %}Category{% endblock title %}
+<!-- main -->
+{% block content%} {% load staticfiles %}
+<!-- maincontent -->
+<div class="main-content">
+    <div class="container">
+        <div class="breadcrumb">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li>
+                                    <a href="/" class="crumie-home">
+                                        <span class="ltn__secondary-color">
+                            			<i class="fas fa-home"></i>
+                            		</span> Home
+                                    </a>
+                                </li>
+                                <li class="crumie-link"><a href="/products">Products</a></li>
+                                <li class="crumie-final"><a>Dental</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns container">
+            <div class="row">
+                <div class="sidebar sidebar-main col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <div class="block block-vertnav clearfix hide-below-768">
+                        <div class="block-title">
+                            <strong><span>Categories</span></strong>
+                        </div>
+                        <div class="block-content">
+                            <ul class="menu">
+                                <!-- Consumables -->
+                                <li class="list "><a class="level1" href="#">Consumables</a>
+                                    <ul class="items">
+                                        <li class="list">
+                                            <a class="level1" href="#"> Anaesthetics</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Anaesthetics - Injectable</a></li>
+                                                <li> <a href="#"> Anaesthetics - Spray</a></li>
+                                                <li> <a href="#"> Anaesthetics - Topical</a></li>
+                                                <li> <a href="#">  Pain Relief</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Dental Bibs</a></li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Dental Cotton Consumables</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Cotton Rolls</a></li>
+                                                <li> <a href="#"> Gauze Swabs</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Dental Dams</a></li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Dental Plastic Consumables</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Cheek Retractors</a></li>
+                                                <li> <a href="#"> Disposable Cups and Straws</a></li>
+                                                <li> <a href="#"> Plastic Accessories</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Emergency & Resuscitation</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Emergency Drugs</a></li>
+                                                <li> <a href="#"> Emergency Resuscitation Kits</a></li>
+                                                <li> <a href="#"> Oxygen Masks and Tubing</a></li>
+                                                <li><a href="#">Resuscitation Masks</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Endodontics</a></li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Evacuation</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Emergency Drugs</a></li>
+                                                <li> <a href="#"> Emergency Resuscitation Kits</a></li>
+                                                <li> <a href="#"> Oxygen Masks and Tubing</a></li>
+                                                <li><a href="#">Resuscitation Masks</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Finishing & Polishing</a></li>
+                                        <li><a href="#"> Impression Products</a></li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Infection Control & Hygiene</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Antiseptics Disinfectants and Cleaning Agents</a></li>
+                                                <li> <a href="#"> Barrier Protection</a></li>
+                                                <li> <a href="#"> Dental Combo Kitsg</a></li>
+                                                <li><a href="#">Gloves</a></li>
+                                                <li><a href="#">Masks</a></li>
+                                                <li><a href="#">Protective Clothing</a></li>
+                                                <li><a href="#">Wipes</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list">
+                                            <a class="level1" href="#">Janitorial & Wash Room Supplies</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Disposable Cups and Straws</a></li>
+                                                <li> <a href="#"> Hand Hygiene and Sanitisers</a></li>
+                                                <li> <a href="#"> Paper Towels</a></li>
+                                                <li><a href="#">Rubbish Bags</a></li>
+                                                <li><a href="#">Rubbish Bins</a></li>
+                                                <li><a href="#">Tissues</a></li>
+                                                <li><a href="#">Toilet Rolls</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Oral Health Products</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Baby Supplies</a></li>
+                                                <li> <a href="#"> Dental Floss and Tape</a></li>
+                                                <li> <a href="#"> Implant Brushes</a></li>
+                                                <li><a href="#">Interdental Brushes</a></li>
+                                                <li><a href="#">Mouthwashes</a></li>
+                                                <li><a href="#">Plaque Disclosure</a></li>
+                                                <li><a href="#">Prophylaxis Paste</a></li>
+                                                <li><a href="#">Retail Displays</a></li>
+                                                <li><a href="#">Teething Rings</a></li>
+                                                <li><a href="#">Toothbrushes</a></li>
+                                                <li><a href="#">Toothpaste & Tooth Mousse</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Oral Surgery</a>
+                                            <ul class="items">
+                                                <li> <a href="#"> Scalpels</a></li>
+                                                <li> <a href="#"> Surgery Packs</a></li>
+                                                <li> <a href="#"> Sutures</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Restorative</a></li>
+                                        <li class="list">
+                                            <a class="level1" href="#"> Sterilisation Consumables</a>
+                                            <ul class="items">
+                                                <li> <a href="#">Autoclave Tape</a></li>
+                                                <li> <a href="#">Chloride Test Strips</a></li>
+                                                <li> <a href="#">Clinical Towels and Liners</a></li>
+                                                <li><a href="#">Control and Record Keeping</a></li>
+                                                <li><a href="#">Distiller Consumables</a></li>
+                                                <li><a href="#">Instrument Cleaning Brushes</a></li>
+                                                <li><a href="#">Instrument Detergents & Cleaners</a></li>
+                                                <li><a href="#">Instrument Protectors</a></li>
+                                                <li><a href="#">Pouches and Rolls</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#"> Syringes, Needles & Sharps</a>
+                                            <ul class="items">
+                                                <li> <a href="#">B Braun Needles</a></li>
+                                                <li> <a href="#">BD Needles</a></li>
+                                                <li> <a href="#">Infusion and Solution Sets</a></li>
+                                                <li><a href="#">IV Cannulas</a></li>
+                                                <li><a href="#">IV Catheters</a></li>
+                                                <li><a href="#">Lancets</a></li>
+                                                <li><a href="#">Needle and Syringe Sets</a></li>
+                                                <li><a href="#">Needle Counters</a></li>
+                                                <li><a href="#">Nipro Needles</a></li>
+                                                <li><a href="#">Securement Dressings</a></li>
+                                                <li><a href="#">Sharps Containers and Wall Brackets</a></li>
+                                                <li><a href="#">Spinal Needles</a></li>
+                                                <li><a href="#">Splashshields</a></li>
+                                                <li><a href="#">Terumo Needles</a></li>
+                                                <li><a href="#">TSK SteriJect Needles</a></li>
+                                                <li><a href="#">Winged Infusion Sets</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> Whitening Products</a></li>
+                                        <li><a href="#"> X-Ray Products</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="list"><a class="level1" href="#">Equipment</a>
+                                    <ul class="items">
+                                        <li> <a href="#"> Item 2-1 </a></li>
+                                        <li> <a href="#"> Item 2-2 </a></li>
+                                        <li> <a href="#"> Item 2-3 </a></li>
+                                    </ul>
+                                </li>
+                                <li class="list"><a href="#">On Special</a>
+                                    <ul class="items">
+                                        <li> <a href="#"> Item 3-1 </a></li>
+                                        <li> <a href="#"> Item 3-2 </a></li>
+                                        <li> <a href="#"> Item 3-2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column main  col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    <div class="ltn__product-area ltn__product-gutter mb-120 shop">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 order-lg-2 shop-area">
+                                    <div class="sub-categories wrapper grid sub-categories-grid">
+                                        <ul class="sub-categories list items sub-categories-items col-group">
+                                            {% for type in type_objs %}
+                                            <li class="h4 active">
+                                                <div class="categort-image">
+                                                    <a href="{% url 'product_by_category' type.url %}">
+                                                        <img src="{{type.image.url}}" alt="">
+                                                    </a>
+
+                                                </div>
+                                                <a id="tab-{{ type.name | slugify }}" href="{% url 'product_by_category' type.url %}" data-toggle="tab" aria-expanded="true">
+                                                    <i class="fa fa-folder-o" aria-hidden="true"></i>{{ type.name }}
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+
+                                    </div>
+                                    <div class="tab-content list-product">
+                                        <div class="tab-pane fade active show">
+                                            <div class="list-product-inner">
+                                                <div class="row">
+                                                    {%for item in page_obj %}
+                                                    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+                                                        <div class="ltn__product-item ltn__product-item-3 text-center modal-product-info shop-details-info pl-0">
+                                                            <div class="product-title">
+
+                                                                {{item.sku}}<a href="#">-{{item.name}}</a>
+
+                                                            </div>
+                                                            <div class="product-image">
+                                                                <a href="product/{{item.url}}">
+                                                                    <img src="{% static 'images/product.jpg'%}" alt="">
+                                                                </a>
+
+                                                            </div>
+                                                            <div class="product-price">
+                                                                ${{item.price}}
+                                                            </div>
+                                                            <div class="ltn__product-details-menu-2">
+                                                                <ul>
+                                                                    <li class="qty-box">
+                                                                        <div class="cart-plus-minus">
+                                                                            <div class="dec-qtybutton">
+                                                                                <i class="fas fa-caret-down" id="dec">
+                                    
+                                                                                </i>
+                                                                            </div>
+                                                                            <div class="text-input">
+                                                                                <input id='number' min='0' name='quantity' type='text' value='0' />
+                                                                            </div>
+
+                                                                            <div class="inc-qtybutton ">
+                                                                                <i class="fas fa-caret-up" id="inc"></i>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <!-- False -->
+                                                                    <li class="cart-box">
+                                                                        <button type="button" data-role="btn-add-to-cart" class="theme-btn-1 btn" title="Add to Cart" data-cy="btn-add-to-cart">
+                                                                            <a href="{% url 'add_cart' item.id %}" class="add-tocard">
+                                                                                <span style="color: #fff;">
+                                                                                    <i class="fas fa-shopping-cart"></i>
+                                                                                    <span>Add to Cart</span>
+                                                                                </span>
+                                                                            </a>
+                                                                            
+                                                                        </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {%endfor%}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ltn__pagination-area text-center col-lg-12 order-lg-2">
+                                    <div class="ltn__pagination">
+                                        {% if page_obj.has_other_pages %}
+                                        <ul class="pagination">
+                                            {% if page_obj.has_previous %}
+                                            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                                            {% else %}
+                                            <li class="disabled"><span>&laquo;</span></li>
+                                            {% endif %} {% for i in page_obj.paginator.page_range %} {% if page_obj.number == i %}
+                                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span>
+                                            </li>
+                                            {% else %}
+                                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                                            {% endif %} {% endfor %} {% if users.has_next %}
+                                            <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                                            {% else %}
+                                            <li class="disabled"><span>&raquo;</span></li>
+                                            {% endif %}
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const list = document.querySelectorAll('.list');
+
+    function accordion(e) {
+        e.stopPropagation();
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else if (this.parentElement.parentElement.classList.contains('active')) {
+            this.classList.add('active');
+        } else {
+            for (i = 0; i < list.length; i++) {
+                list[i].classList.remove('active');
+            }
+            this.classList.add('active');
+        }
+    }
+    for (i = 0; i < list.length; i++) {
+        list[i].addEventListener('click', accordion);
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $("#inc").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) + 1;
+            container.val(result);
+            container.val(result).change();
+        });
+        $("#dec").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) - 1;
+            if (result < 0)
+                result = 0;
+            container.val(result);
+            container.val(result).change();
+        });
+
+    })
+</script>
+<script src="{% static 'js/script.js'%}"></script>
+{% endblock content%}

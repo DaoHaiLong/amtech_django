@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap");
+@font-face {
+    font-family: 'ZonaPro';
+    src: url(./fonts/FontsFree-Net-ZonaPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ZonaPro';
+    src: url(./fonts/ZonaPro-Thin.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'ZonaPro';
+    src: url(./fonts/FontsFree-Net-ZonaPro-Bold.ttf);
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.rows {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin: 0 -15px; */
+    /* justify-content: space-between; */
+    /* margin-top: 20px; */
+}
+
+
+/* ==================dropdown===================== */
+
+.dropdown {
+    margin-right: 60px
+}
+
+.dropdown .level-top::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.dropdown .level-top:hover {
+    color: #ff7214;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    position: absolute;
+    inset: 8px auto auto 0px !important;
+    margin: 0px;
+    transform: translate(0px, 32px);
+    border-top: 4px solid #ff7214;
+    width: 240px;
+}
+
+.dropdown:hover>.cart-item {
+    display: block;
+    position: absolute;
+    inset: 13px auto auto -226px !important;
+    margin: 0px;
+    transform: translate(0px, 29px);
+    border-top: 0;
+    width: 380px;
+    background: #515758;
+    border-radius: 0;
+}
+
+.dropdown:hover>.notification {
+    display: block;
+    position: absolute;
+    inset: 85px auto auto -226px !important;
+    margin: 0px;
+    transform: translate(0px, 29px);
+    border-top: 0;
+    width: 380px;
+    background: #fff;
+    border-radius: 0;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+}
+
+.dropdown-menu>li:hover>.dropdown-submenu {
+    display: block;
+}
+
+.dropdown-item {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* .dropdown-menu+li>a::after {
+content: "a";
+font-family: "Font Awesome 5 Free";
+display: inline-block;
+} */
+
+
+/* =================Content======================= */
+
+a {
+    text-decoration: none;
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'ZonaPro';
+    line-height: 40px;
+    /* 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+a:hover {
+    color: #ff7214;
+    transition: all .3s ease 0s;
+}
+
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/* input {
+height: 38px;
+padding-left: 35px;
+border: 1px solid #666;
+border-radius: 5px;
+margin-bottom: 0;
+} */
+
+
+/* =================header========================  */
+
+.header {
+    box-shadow: 0 3px 6px 0 #0000005c;
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.header-left {
+    padding: 0 15px;
+    max-width: 541.66px;
+}
+
+.header-left .header-left__buttom {
+    display: flex;
+    margin-top: 15px;
+}
+
+.logo {
+    padding: 0 15px;
+}
+
+
+/* .header-left .header-left__top a {
+text-decoration: none;
+color: #515758;
+font-size: 18px;
+} */
+
+.header-right {
+    padding-left: 100px;
+    padding-right: 15px;
+    width: 541.66px;
+}
+
+.header-right__top {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.header-right__top input {
+    height: 38px;
+    padding-left: 35px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.header-right__top button[type="submit"] {
+    height: 38px;
+    color: #c2c2c2;
+    line-height: 43px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 35px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    padding: 0;
+}
+
+.header-right .header-right__buttom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-right__buttom a {
+    font-size: 14px;
+}
+
+.fa-user::before {
+    padding: 0 2px;
+}
+
+.fa-heart::before {
+    padding: 0 2px;
+}
+
+.fa-shopping-cart {
+    padding: 0 2px;
+}
+
+
+/* .dropdown-submenu li {
+column-count: 3;
+} */
+
+.link-product>a::after {
+    content: ">";
+    /* font-family: "Font Awesome 5 Free"; */
+    display: inline-block;
+    font-size: 15px;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.link-product a:hover {
+    color: #ff7214;
+    background-color: #f0f8ff;
+}
+
+.link-services a:hover {
+    color: #ff7214;
+    background-color: #f0f8ff;
+}
+
+.link-about a:hover {
+    color: #ff7214;
+    background-color: #f0f8ff;
+}
+
+
+/* header right */
+
+.cart .dropdown>ul.dropdown-menu.show {
+    position: absolute;
+    inset: 4px auto auto 0px;
+    margin: 0px;
+    transform: translate(-63%, 40px);
+    width: 410px;
+}
+
+.link-cart {
+    display: flex;
+    padding: 15px 0;
+}
+
+.minicart-notification {
+    background-color: #fff;
+}
+
+.link-cart a.dropdown-item {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'ZonaPro';
+    font-weight: 500;
+    color: #fff;
+}
+
+.link-cart a.special {
+    text-decoration: underline;
+}
+
+.link-cart a.special:hover {
+    color: #73c6f0;
+    background-color: #515758;
+}
+
+.link-cart a.specials:hover {
+    background-color: #515758;
+}
+
+.minicart-notification {
+    color: #666;
+    font-size: 14px;
+    font-family: 'ZonaPro';
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* =========================Status  notification============== */
+
+.status_notification {
+    background-color: #ffefef;
+    font-size: 14px;
+    color: #ee3124;
+    text-align: center;
+    padding: 10px;
+    font-family: 'ZonaPro';
+    font-weight: 400;
+}
+
+.status_notification p {
+    margin-bottom: 0;
+    color: #5c727d;
+}
+
+
+/* ========================banner slider======================= */
+
+.slider .slider-item {
+    position: relative;
+}
+
+.slider .slider-item img {
+    width: 100%;
+    height: 600px;
+}
+
+
+/* =====slider 3 ========*/
+
+.slider .slider-content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-content .slider-content-inner {
+    /* width: 60%;
+padding: 0 15px;
+box-sizing: border-box; */
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    left: calc((100% - 1320px) / 2);
+    top: 45%;
+    /* transform: translateY(-50%); */
+    max-width: 490px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.slider-content .slider-content-inner .slide-title h2 {
+    font-size: 60px;
+    font-family: 'ZonaPro';
+    font-weight: bold;
+    color: #fff;
+    ;
+    line-height: 70px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
+}
+
+.slider-content .slider-content-inner .slide-describe p {
+    text-transform: unset;
+    font-family: 'ZonaPro';
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.slider-content .slider-content-inner a.slide-btn {
+    font-size: 16px;
+    background: transparent linear-gradient(330deg, #ffc956a8 0, #f47d50 100%) 0 0 no-repeat padding-box;
+    border-radius: 10px;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 65px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: .5s all;
+    position: absolute;
+    right: 69%;
+    transform: translateX(-62%);
+}
+
+
+/* ===slider content 2====== */
+
+.slider .slider-content2 {
+    position: absolute;
+    top: 32%;
+    left: 90%;
+    transform: translateX(-68.5%);
+}
+
+.slider-content2 .slider-content-inner {
+    width: 60%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.slider-content2 .slider-content-inner .slide-title h2 {
+    font-size: 60px;
+    font-family: 'ZonaPro';
+    font-weight: bold;
+    color: #4d5a85;
+    line-height: 70px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+
+.slider-content2 .slider-content-inner .slide-describe p {
+    letter-spacing: 0;
+    color: #4d5a85;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-family: 'ZonaPro';
+    text-align: center;
+}
+
+.slider-content2 .slider-content-inner a.slide-btn1 {
+    font-size: 16px;
+    background-color: #f1663d;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 65px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: .5s all;
+    position: absolute;
+    right: 56%;
+    transform: translateX(-65%);
+}
+
+.slider-content2 .slider-content-inner a.slide-btn2 {
+    font-size: 16px;
+    background-color: #f1663d;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 65px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: .5s all;
+    position: absolute;
+    right: 39%;
+    transform: translateX(-65%);
+}
+
+
+/* ======slider content 1======== */
+
+.slider .slider-content1 {
+    position: absolute;
+    top: 49%;
+    left: 100%;
+    transform: translateX(-86%);
+}
+
+.slider-content1 .slider-content-inner {
+    width: 60%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.slider-content1 .slider-content-inner .slide-title h2 {
+    font-size: 60px;
+    font-family: 'ZonaPro';
+    font-weight: bold;
+    color: #4d5a85;
+    line-height: 70px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.slider-content1 .slider-content-inner .slide-describe p {
+    letter-spacing: 0;
+    color: #4d5a85;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-family: 'ZonaPro';
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.slider-content1 .slider-content-inner a.slide-btn {
+    font-size: 16px;
+    background-color: #f1663d;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 65px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: .5s all;
+    position: absolute;
+    right: 50%;
+    transform: translateX(-65%);
+}
+
+
+/* =========================Footer======================= */
+
+#footer-main {
+    background-color: #4c5a85;
+    color: #fff;
+}
+
+#footer-main ul li a {
+    line-height: 0;
+}
+
+.section-container {
+    padding: 30px 0;
+}
+
+#footer-main h4 {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#footer-main p {
+    color: inherit;
+    font-size: 14px;
+    font-family: 'ZonaPro';
+    font-weight: 400;
+}
+
+.footer-primary {
+    padding: 0 15px;
+}
+
+.footer-content ul {
+    padding-left: 0;
+}
+
+.footer-content ul,
+li>a {
+    color: inherit;
+    font-size: 14px;
+    font-family: 'ZonaPro';
+    font-weight: 400;
+}
+
+#footer-main .newsletter form {
+    position: relative;
+}
+
+#footer-main .newsletter input {
+    height: 40px;
+    box-shadow: none;
+    padding-right: 105px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 295px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea {
+    /* background-color: var(--white);
+border: 2px solid;
+border-color: var(--border-color-9); */
+    height: 65px;
+    /* -webkit-box-shadow: none; */
+    /* box-shadow: none;*/
+    padding-left: 20px;
+    /* font-size: 16px;
+color: var(--ltn__paragraph-color);
+width: 100%;  */
+    margin-bottom: 30px;
+    border-radius: 0;
+    padding-right: 40px;
+}
+
+#footer-main .newsletter .actions button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    line-height: 25px;
+    border-radius: 0 15px 15px 0;
+    padding: 5px 10px !important;
+    width: fit-content;
+    min-width: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: #080b43;
+}
+
+#footer-main .newsletter .actions button span {
+    color: #fff;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+
+/* =========footer-socail=========== */
+
+#footer-main ul.footer-social {
+    width: 100%;
+    display: flex;
+    padding-left: 0;
+}
+
+.footer-social li {
+    padding-right: 7px;
+}
+
+.footer-social li img {
+    width: 33px;
+}

@@ -1,0 +1,62 @@
+ {% extends 'pages/base.html' %} {% block title %}Home{% endblock title %}
+<!-- slider  -->
+{% block content %}
+<div class="main">
+    <!-- Slider -->
+    <div class="slider">
+        <!-- slider 1 -->
+        <div class="slider-item">
+            <img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/rat-banner-homepage.png" alt="slider1">
+            <div class="slider-content1 container">
+                <div class="rows">
+                    <div class="slider-content-inner">
+                        <div class="slide-title">
+                            <h2>Rapid Antigen Tests Available!</h2>
+                        </div>
+                        <div class="slide-describe">
+                            <p>Protect your workplace - order tests now!</p>
+                        </div>
+                        <a href="#" type="button" class="slide-btn">View Online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 2 -->
+        <div class="slider-item">
+            <img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/MicrosoftTeams-image_3_.png" alt="slider2">
+            <div class="slider-content2 container">
+                <div class="rows">
+                    <div class="slider-content-inner">
+                        <div class="slide-title">
+                            <h2>Have You Got Yours?</h2>
+                        </div>
+                        <div class="slide-describe">
+                            <p>Our brand-new medical supplies <br> catalogue is out now!</p>
+                        </div>
+                        <a href="{% url ''}" type="button" class="slide-btn1">Request A Copy</a>
+                        <a href="#" type="button" class="slide-btn2">View Online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 3 -->
+        <div class="slider-item">
+            <img src="https://d121flch94kqcq.cloudfront.net/static/img/home-new/MicrosoftTeams-image_2__2.png" alt="slider">
+            <div class="slider-content container">
+                <div class="rows">
+                    <div class="slider-content-inner">
+                        <div class="slide-title">
+                            <h2>We’re making ordering even faster!</h2>
+                        </div>
+                        <div class="slide-describe">
+                            <p>Check out our new and improved Rappid App.</p>
+                        </div>
+                        <a href="#" type="button" class="slide-btn">Enquire Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

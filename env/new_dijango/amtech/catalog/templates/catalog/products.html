@@ -1,0 +1,260 @@
+{% extends 'pages/base.html' %}
+<!-- main content -->
+
+{% block notification%}
+<div class="status_notification">
+    <p>We've recently upgraded our website, please
+        <a href="/contact/"><span class="contact-link">contact us</span></a> if you experience any issues.
+    </p>
+</div>
+{% endblock notification%}
+<script>
+    var user = '{{request.user}}'
+
+    function getToken(name) {
+
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getToken('csrftoken');
+</script>
+{% block content %} {% load staticfiles %}
+<!-- <div class="container">
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-xs-6">
+                <a href="{% url 'product' product.id %}"><img src="catalog/medias/Consumable" /></a>
+            </div>
+            <div class="col-xs-3">
+                <b>Sku<br/>
+                    <b>Name</b><br/>
+                <b>Url</b><br/>
+                <b>Price</b><br/>
+                <b>Special Price</b>
+            </div>
+            <div class="col-xs-3">
+                {{product.sku}}
+                <br/> ${{product.name}}
+
+                <br/> {{product.url}}
+                <br/> {{product.price}}
+                <br> {{product.special_price}}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div> -->
+<style>
+
+</style>
+<div class="main-content">
+    <div class="container">
+        <div class="breadcrumb">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li>
+                                    <a href="/" class="crumie-home">
+                                        <span class="ltn__secondary-color">
+                                <i class="fas fa-home"></i>
+                            </span> Home
+                                    </a>
+                                </li>
+                                <li class="crumie-link"><a href="/products">Products</a></li>
+                                <li class="crumie-final"><a>{{product.sku}}-{{product.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ltn__shop-details-area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="ltn__shop-details-inner">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="product-image__detail ">
+                                    <div class="slider-product ">
+                                        <!-- slider 1 -->
+                                        <div class="slider-items">
+                                            <img onclick="onClick(this)" class="modal-hover-opacity" src="{% static 'images/product-detail_msi1.jpg' %}" alt="slider1">
+                                        </div>
+                                        <div class="slider-items">
+                                            <img onclick="onClick(this)" class="modal-hover-opacity" src="{% static 'images/product-detail_msi2.jpg'%}" alt="slider2">
+                                        </div>
+                                        <div class="slider-items">
+                                            <img onclick="onClick(this)" class="modal-hover-opacity" src="{% static 'images/product-detail_msi3.jpg'%}" alt="slider3">
+                                        </div>
+                                        <div class="slider-items">
+                                            <img onclick="onClick(this)" class="modal-hover-opacity" src="{% static 'images/product-detail_msi4.jpg'%}" alt="slider4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-image__scroll">
+                                    <div class="slider-product">
+                                        <!-- slider 1 -->
+                                        <div class="slider-item_scroll" style="padding: 0 242px; padding-bottom: 10px;">
+                                            <img onclick="onClick(this)" class="modal-hover-opacity" src="{% static 'images/product-detail__scroll1.jpg' %}" alt="slider1">
+                                        </div>
+                                        <!-- <div class="slider-item_scroll" style="    padding: 0 242px;">
+                                            <img src="{% static 'images/product-detail__scroll2.jpg' %}" alt="slider1">
+                                        </div>
+                                        <div class="slider-item_scroll" style="    padding: 0 242px;">
+                                            <img src="{% static 'images/product-detail__scroll3.jpg' %}" alt="slider1">
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div id="modal01" class="modal" onclick="this.style.display='none'">
+                                    <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <div class="modal-content">
+                                        <img id="img01" style="max-width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-content__detail">
+                                    <div class="product-detail__title">
+                                        <h2>{{product.name}}</h2>
+                                    </div>
+                                    <div class="info-sku">
+                                        <span>SKU {{product.sku}}</span>
+                                    </div>
+                                    <div class="product-detail__price">
+                                        <span>${{product.price}}</span>
+                                        <span class="gst text-uppercase">+gst</span>
+                                        <p class="delivery-timeframe">
+                                            <span class="text-content">
+                                            Buy this product in qty's of 12 to save packaging & waste
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="info-description">
+                                        <div class="id-title" style="margin-bottom: 15px;">
+                                            Description & Features
+                                        </div>
+                                        <div class="description-content">
+                                            <p>The Socialist Republic of Vietnam, widely known as Vietnam, is not a strange name to the whole world. Although this country is ravaged by a series of wars which cause serious damages, Vietnam in the eyes of
+                                                the world is nice and peaceful. Vietnam is located in the eastern Indochina Peninsula in Southeast Asia, with Hanoi as its capital. With an area of 331,690 sq. kilometers, to the north of Vietnam is China,
+                                                to the west is Laos and Cambodia, to the east is Gulf of Tonkin and East Sea, and to the south is Thailand Gulf.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ltn__product-details-menu-2">
+                                        <ul style="display: flex;">
+                                            <li class="qty-box" style="margin-right: 10px;">
+                                                <div class="cart-plus-minus">
+                                                    <div class="dec-qtybutton">
+                                                        <i class="fas fa-caret-down" id="dec" style="padding: 7px 13px;">
+            
+                                                        </i>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input id='number' name='quantity' type='text' value='0' />
+                                                    </div>
+
+                                                    <div class="inc-qtybutton ">
+                                                        <i class="fas fa-caret-up" id="inc" style="padding: 7px 9px;"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-box" style="padding: 9px 0; margin:16px 10px 0 0;background: #3ec2df; border-radius:5px;">
+                                                <button type="button" data-role="btn-add-to-cart" class="theme-btn-1 btn update-cart" title="Add to Cart" data-cy="btn-add-to-cart" data-product="{{product.id}}" data-action="add" method="POST">
+                                                    <a href="{% url 'add_cart' product.id %}">
+                                                        <span style="color: #fff;">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            <span>Add </span>
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $('.slider-product').slick({
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        dots: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                infinite: true,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                infinite: true,
+            }
+        }]
+    });
+</script>
+<script>
+    var img = document.querySelector('.slider-items img');
+    var input = document.querySelector('.in');
+    img.onclick = function() {
+        input.style.display = 'block';
+    }
+    input.onclick = function() {
+        input.style.display = 'none';
+    }
+
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $("#inc").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) + 1;
+            container.val(result);
+            container.val(result).change();
+        });
+        $("#dec").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) - 1;
+            if (result < 0)
+                result = 0;
+            container.val(result);
+            container.val(result).change();
+        });
+
+    })
+</script>
+<script src="{% static 'js/script.js'%}"></script>
+{% endblock content %}

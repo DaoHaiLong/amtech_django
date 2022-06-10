@@ -1,0 +1,166 @@
+<!-- ke thu layout -->
+{% extends 'checkout/base.html' %}
+<!-- title -->
+{% block title %}Checkout Cart{% endblock title %}
+<!-- --------main content------------ -->
+
+<!-- notification -->
+{% block notification%}
+<div class="status_notification">
+    <p>We've recently upgraded our website, please
+        <a href="/contact/"><span class="contact-link">contact us</span></a> if you experience any issues.
+    </p>
+</div>
+{% endblock notification%}
+<!-- end notification -->
+
+<!-- content -->
+{% block content %} {% load staticfiles %}
+<div class="main-content">
+    <div class="liton__shoping-cart-area">
+        <h1 class="page-title text-center">Shopping Cart</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping-cart-inner">
+                        <div class="shoping-cart-table">
+                            <table class="mb-30">
+                                <thead>
+                                    <tr>
+                                        <th class="cart-product-image">Item</th>
+                                        <th class="cart-product-info"></th>
+                                        <th class="cart-product-price">Price</th>
+                                        <th class="cart-product-quantity">Qty</th>
+                                        <th class="cart-product-subtotal">Subtotal</th>
+                                        <th class="cart-product-remove"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for cart_item in cart_items %}
+                                    <tr>
+                                        <td class="cart-product-image">
+                                            <a href=""><img class="product-image-photo" src="{% static 'images/product1.jpg'%}" alt="" max-width="110" max-height="160"></a>
+                                        </td>
+                                        <td class="cart-product-info">
+                                            <h4>
+                                                <a href="/catalog/product/{{cart_item.product.url}}">{{cart_item.product.sku}}-{{cart_item.product.name}}</a>
+                                            </h4>
+                                        </td>
+                                        <td class="cart-product-price">${{cart_item.product.price}}</td>
+                                        <td class="cart-product-quantity">
+
+                                            <!-- <p class="quantity"> {{cart_item.qty}}</p> -->
+                                            <!-- <input type="text" id="number" class="quantity" value="{{cart_item.qty}}"> -->
+                                            <!-- <div class="quantity">
+                                                <img id="inc" data-product="{{ cart_item.product.id }}" data-action="add" class="chg-qty update-cart" src="{% static 'images/canets_up.png'%}" alt="">
+                                                <img id="dec" data-product="{{ cart_item.product.id }}" data-action="remove" class="chg-qty update-cart" src="{% static 'images/canets_down.png'%}" alt="">
+                                            </div> -->
+
+                                            <div class="col">
+                                                <div class="input-group input-spinner">
+
+                                                    <input type="text" class="form-control" value="{{ cart_item.qty }}" />
+                                                    <div class="quatity-icon">
+                                                        <div class="input-group-prepend">
+                                                            <a href="{% url 'remove_cart_qty' cart_item.product.id cart_item.id %}" class="btn btn-light" type="button">
+                                                                <i class="fas fa-caret-down"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-append">
+                                                            <form action="{% url 'add_cart_qty'  cart_item.product.id cart_item.id %}" method="post">
+                                                                {% csrf_token %}
+                                                                <button class="btn btn-light" type="submit" id="button-plus">
+                                                                    <i class="fas fa-caret-up"></i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- input-group.// -->
+                                            </div>
+                                        </td>
+                                        <td data-th="Subtotal" class="cart-product-subtotal">
+                                            <var class="subtotal"> ${{cart_item.sub_total}}</var>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'remove_cart' cart_item.product.id cart_item.id %}">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {%endfor%}
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="shoping-cart-total">
+                            <h4>Summary</h4>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Cart Subtotal</td>
+                                        <td id="cart-subtotal">${{total}}</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Shipping and Handing</td>
+                                        <td id="cart-shipping">${{shipping}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Admin Fee</td>
+                                        <td id="cart-admin">${{admin_fee}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GST</td>
+                                        <td id="cart-gst">${{tax}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Order Total</strong>
+                                        </td>
+                                        <td id="cart-total">
+                                            <strong>${{order_total}}</strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn-wrapper text-right">
+                                <a href="/product/checkout/" class="theme-btn-1 btn btn-effect-1">Proceed to checkout</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#inc").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) + 1;
+            container.val(result);
+            container.val(result).change();
+        });
+        $("#dec").click(function() {
+            var container = $("#number");
+            let result = parseInt(container.val()) - 1;
+            if (result < 0)
+                result = 0;
+            container.val(result);
+            container.val(result).change();
+        });
+
+    })
+</script>
+<script>
+</script>
+{%endblock content%}
+<!-- end content -->

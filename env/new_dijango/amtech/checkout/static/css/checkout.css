@@ -1,0 +1,169 @@
+/* ===================================Cart================================ */
+
+
+/* ====== table ====== */
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    font-family: 'ZonaPro';
+    font-size: 14px;
+}
+
+strong {
+    font-family: 'ZonaPro';
+    font-weight: 500;
+    font-size: 14px;
+    color: #515758;
+}
+
+.liton__shoping-cart-area {
+    margin-bottom: 120px;
+}
+
+h1.page-title {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    color: #4c5a85;
+}
+
+.shoping-cart-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.liton__shoping-cart-area .shoping-cart-table {
+    width: 73%;
+}
+
+.liton__shoping-cart-area .shoping-cart-table table {
+    width: 100%;
+}
+
+.liton__shoping-cart-area .shoping-cart-inner table thead {
+    background: #4c5a85;
+}
+
+.liton__shoping-cart-area .shoping-cart-inner table thead th {
+    padding: 12px 25px 10px;
+    color: white;
+    background-color: unset;
+    font-family: 'ZonaPro';
+    font-weight: 500;
+}
+
+.shoping-cart-table .cart-product-info {
+    width: 40%;
+}
+
+.cart-product-remove {
+    cursor: pointer;
+}
+
+.shoping-cart-table tbody {
+    border-bottom: 1px solid #dee2e6;
+}
+
+
+/* ============== Summary ============== */
+
+.shoping-cart-total tr:first-child td {
+    padding-top: 15px;
+}
+
+.shoping-cart-total {
+    width: calc(23% + 25px);
+    padding-left: 25px;
+    max-width: 450px;
+}
+
+.liton__shoping-cart-area .shoping-cart-total h4 {
+    background: #4c5a85;
+    margin-bottom: 0;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.shoping-cart-total .table {
+    margin-bottom: 0;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #f7f8fa;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.shoping-cart-total tr td {
+    padding: 5px 10px;
+    border: 0;
+    color: #515758;
+}
+
+.shoping-cart-total tr:last-child td {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+
+/* ================= Data=================== */
+
+.subtotal {
+    padding-left: 35px;
+    font-family: 'ZonaPro';
+    font-weight: 500;
+}
+
+.input-group input.form-control {
+    font-weight: 500;
+}
+
+td.cart-product-price {
+    padding-left: 25px;
+    font-family: 'ZonaPro';
+    font-weight: 500;
+}
+
+
+/* ============= Process to check=========== */
+
+.shoping-cart-total .btn-wrapper {
+    margin-top: 0;
+    background-color: #f5f5f5;
+    padding: 0 10px 30px 10px;
+}
+
+.shoping-cart-total .btn-wrapper .theme-btn-1 {
+    height: auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: 'ZonaPro';
+    font-weight: 600;
+    background-color: #73c6f0;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.shoping-cart-total .btn-wrapper .theme-btn-1 {
+    display: block;
+}
+
+.shoping-cart-total .btn-wrapper .theme-btn-1:hover {
+    background: #515758;
+    color: #fff;
+}
