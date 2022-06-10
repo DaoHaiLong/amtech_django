@@ -17,6 +17,7 @@ def _id(request):
     if not id:
         id=request.session.create()
         
+# ===== calculation total titem in cart  
 def cart(request,subtotal=0,qty=0,admin_fee=3.91,shipping=None,cart_items=None):
     try:
         if request.user.is_authenticated:
@@ -46,6 +47,7 @@ def cart(request,subtotal=0,qty=0,admin_fee=3.91,shipping=None,cart_items=None):
     }
     return render(request, 'checkout/ShoppingCart.html', context=context)
 
+# === function add item in cart on checkout
 def add_cart(request,product_id):
     product=Product.objects.get(id=product_id)
    
@@ -65,6 +67,7 @@ def add_cart(request,product_id):
     return redirect('cart')
 
 
+# ==== function remove item in checkout cart
 def remove_cart_item(request, product_id, cart_item_id):
     product = get_object_or_404(Product, id=product_id)
     try:
@@ -85,6 +88,7 @@ def remove_cart_item(request, product_id, cart_item_id):
         pass
     return redirect('cart')
 
+# function remove 0ne to click for quantity in the item 
 def remove_cart(request, product_id, cart_item_id):
     product = get_object_or_404(Product, id=product_id)
     try:
@@ -109,6 +113,7 @@ def remove_cart(request, product_id, cart_item_id):
         pass
     return redirect('cart')
 
+# ===function add 0ne to click for quantity in the item 
 def add_cart_qty(request, product_id, cart_item_id):
     product = get_object_or_404(Product, id=product_id)
     try:

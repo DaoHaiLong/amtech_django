@@ -36,7 +36,7 @@
                                         </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <li class="link-product">
-                                        <a class="dropdown-item" href="#">Dental</a>
+                                        <a class="dropdown-item" href="{% url 'index' %}">Dental</a>
                                         <ul class="dropdown-menu dropdown-submenu">
                                             <li>
                                                 <a class="dropdown-item" href="#">Consumables</a>
@@ -448,7 +448,10 @@
                         </div>
                     </div>
                     <div class="logo">
-                        <img src="{% static 'images/logo.png'%}" alt="logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'images/logo.png'%}" alt="logo">
+                        </a>
+
                     </div>
                     <div class="header-right ">
                         <div class="header-right__top">
@@ -508,7 +511,7 @@
                                         <h4>Product</h4>
                                         <ul>
 
-                                            <li><a title="Medical" href="#">Dental</a></li>
+                                            <li><a title="Medical" href="{% url 'index' %}">Dental</a></li>
 
                                             <li><a title="Medical" href="#">First Aid</a></li>
 
